@@ -4,7 +4,8 @@ import { defineBddConfig } from 'playwright-bdd';
 // This links your business logic (Gherkin) to your technical logic (Steps)
 const testDir = defineBddConfig({
   features: 'features/*.feature',
-  steps: 'steps/*.ts',
+  steps: ['steps/*.ts', 'fixtures/fixture.ts'], 
+  //steps: 'steps/*.ts',
 });
 
 export default defineConfig({
